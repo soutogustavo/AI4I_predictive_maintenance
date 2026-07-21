@@ -1,0 +1,2 @@
+# AI4I_predictive_maintenance
+Predictive maintenance
