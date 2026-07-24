@@ -12,8 +12,10 @@ Predictive Maintenance: End-to-End ML System Design and Deployment
 ### Clone and install
 
 ```bash
-git clone git@github.com:soutogustavo/AI4I_predictive_maintenance.git
-cd ai4i_predictive_maintenance
+git clone https://github.com/soutogustavo/AI4I_predictive_maintenance.git
+cd AI4I_predictive_maintenance
+uv venv --python 3.12
+source .venv/bin/activate
 uv sync
 ```
 
