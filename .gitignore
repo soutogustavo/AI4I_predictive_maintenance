@@ -225,3 +225,5 @@ __marimo__/
 
 # Store
 *.DS_Store
+
+.devcontainer/
