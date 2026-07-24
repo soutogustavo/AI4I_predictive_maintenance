@@ -57,7 +57,7 @@ def main():
         st.divider()
 
         col1, col2 = st.columns(2)
-        col1.metric("Failure Risk Score", f"{risk_score:.1%}")
+        col1.metric("Failure Risk Score", f"{risk_score:.2%}")
         if flagged:
             col2.error(":warning: FLAGGED: Recommend inspection")
         else:
