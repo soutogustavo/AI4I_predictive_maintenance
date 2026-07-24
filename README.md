@@ -191,12 +191,22 @@ end user, a maintenance engineer, needs a reason to act on, not just a score
 
 ### Input Design Decision
 
-The app takes a given machine readings as input and runs the failure risk as described above. This decision was made because the dataset does not contain persistent machine identity across rows, each row is an independent reading, not a machine tracked over time. In a real deployment scenario, the input would come from a live sensor feed tied to a tracked machine.
+The app takes a given machine readings as input and runs the failure risk
+as described above. This decision was made because the dataset does not
+contain persistent machine identity across rows, each row is an independent
+reading, not a machine tracked over time. In a real deployment scenario,
+the input would come from a live sensor feed tied to a tracked machine.
 
 ### Deployment
 
 Deployed on **Streamlit Community Cloud**, connected directly to the project's
 GitHub repository (`app/streamlit_app.py` as the entry point).
+
+Both the raw dataset (`data/ai4i2020.csv`) and the trained model
+artifact (`models/pipeline.joblib`) are committed to the repository,
+in support of full reproducibility from a clean install and zero-setup
+deployment on Streamlit Community Cloud, which only has access to the
+repository's contents.
 
 ### Manual Validation
 
