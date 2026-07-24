@@ -18,7 +18,7 @@ def get_artifact():
 
 
 def main():
-    st.title("🔧 Machine Failure Risk Assessment")
+    st.title(":wrench: Machine Failure Risk Assessment")
     st.caption(
         "Enter a machine's current operating readings to assess its failure risk. "
         "This tool prioritizes recall (catching real failures) over precision, "
@@ -59,9 +59,9 @@ def main():
         col1, col2 = st.columns(2)
         col1.metric("Failure Risk Score", f"{risk_score:.1%}")
         if flagged:
-            col2.error("⚠️ FLAGGED: Recommend inspection")
+            col2.error(":warning: FLAGGED: Recommend inspection")
         else:
-            col2.success("✅ Normal: No action needed")
+            col2.success(":white_check_mark: Normal: No action needed")
 
         st.subheader("Why this prediction?")
         shap_values_row = result["shap_values"][0]
@@ -75,7 +75,7 @@ def main():
         )[:3]
 
         for i in top_idx:
-            direction = "increases risk ⬆️" if shap_values_row[i] > 0 else "decreases risk ⬇️"
+            direction = "increases risk :arrow_up:" if shap_values_row[i] > 0 else "decreases risk :arrow_down:"
             st.write(f"- **{clean_names[i]}**: {direction} (SHAP = {shap_values_row[i]:+.3f})")
 
         st.caption(
